@@ -10,12 +10,12 @@ const DownloadButton = ({ platform, className = "" }: DownloadButtonProps) => {
   const isAndroid = platform === "android";
   
   const handleDownload = () => {
-    // In a real app, this would link to the app store or download the APK
     if (isAndroid) {
       // Link to download APK directly
       window.location.href = '/quickride.apk';
     } else {
-      // Link to iOS App Store
+      // Link to iOS App Store directly
+      window.location.href = '/quickride.ipa';
     }
   };
   
