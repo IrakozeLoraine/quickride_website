@@ -23,7 +23,7 @@ const HeroSection = () => {
           </div>
           
           <div className="md:w-1/2 flex justify-center">
-            <div className="relative w-64 h-[500px] md:w-80 md:h-[600px] bg-quickride-blue rounded-3xl p-4 shadow-xl animate-float">
+            <div className="relative w-64 h-[500px] md:w-80 md:h-[700px] bg-black rounded-3xl p-4 shadow-xl animate-float">
               <div className="absolute inset-2 bg-white rounded-2xl overflow-hidden">
                 <div className="h-full w-full bg-gray-200 rounded-2xl flex items-center justify-center">
                   <img

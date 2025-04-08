@@ -8,7 +8,7 @@ AccordionTrigger,
 const faqs = [
 {
     question: "How do I download the QuickRide app?",
-    answer: "QuickRide is available for both Android and iOS devices. You can download it from the Google Play Store or Apple App Store by searching for 'QuickRide' or by clicking the download buttons on this website."
+    answer: "QuickRide is available for both Android and iOS devices. You can currently download it by clicking the download buttons on this website."
 },
 {
     question: "How does fare negotiation work?",

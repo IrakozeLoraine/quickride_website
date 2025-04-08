@@ -1,6 +1,16 @@
-import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, X } from "lucide-react";
 
 const Footer = () => {
+  const handleDownload = (platform) => {
+    if (platform === "android") {
+      // Link to download APK directly
+      window.location.href = '/quickride.apk';
+    } else {
+      // Link to iOS IPA directly
+      window.location.href = '/quickride.ipa';
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
@@ -11,13 +21,13 @@ const Footer = () => {
               Connecting passengers and motorcycle riders for fast, reliable, and affordable transportation in Rwanda.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
+              <a href="https://www.linkedin.com/in/loraine-irakoze-20268a194" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
+              <a href="https://x.com/IrakozeLoraine" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                <X size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/irakoze_loraine" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -62,12 +72,12 @@ const Footer = () => {
             <div className="mt-4">
               <h5 className="text-sm font-semibold mb-2">Download App</h5>
               <div className="flex space-x-2">
-                <a href="#" className="bg-white text-black text-xs px-2 py-1 rounded">
+                <div className="cursor-pointer bg-white text-black text-xs px-2 py-1 rounded" onClick={() => handleDownload("android")}>
                   Android
-                </a>
-                <a href="#" className="bg-white text-black text-xs px-2 py-1 rounded">
+                </div>
+                <div className="cursor-pointer bg-white text-black text-xs px-2 py-1 rounded" onClick={() => handleDownload("ios")}>
                   iOS
-                </a>
+                </div>
               </div>
             </div>
           </div>

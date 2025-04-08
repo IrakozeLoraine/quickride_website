@@ -63,11 +63,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				quickride: {
-					purple: '#000000',
-					'light-purple': '#36454F',
-					'dark-purple': '#353935',
-					green: '#e2f4fc',
-					yellow: '#cddffe',
+					purple: '#00C853FF',
+					'light-purple': '#2E7D32FF',
+					'dark-purple': '#757575FF',
+					green: '#e2fce8',
+					yellow: '#cdfed3',
 					blue: '#bcbcbc',
 				}
 			},

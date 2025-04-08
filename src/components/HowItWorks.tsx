@@ -10,26 +10,31 @@ const steps = [
 {
     icon: <Smartphone size={24} className="text-quickride-purple" />,
     title: "Download the App",
-    description: "Get QuickRide on your Android or iOS device from the app store."
+    type: "web",
+    description: "Get QuickRide on your Android or iOS device by clicking the download buttons on this website."
 },
 {
     icon: <Search size={24} className="text-quickride-purple" />,
     title: "Find Nearby Riders",
+    type: "mobile",
     description: "Enter your pickup location to see available motorcycle riders nearby."
 },
 {
     icon: <MessageCircle size={24} className="text-quickride-purple" />,
     title: "Negotiate Your Fare",
+    type: "mobile",
     description: "Chat with the rider to agree on a fair price for your journey."
 },
 {
     icon: <MapPin size={24} className="text-quickride-purple" />,
     title: "Track Your Ride",
-    description: "Follow your rider's location in real-time as they come to pick you up."
+    type: "mobile",
+    description: "Follow your rider's location in real-time as they come to pick you up and as they take you to your destination."
 },
 {
     icon: <ThumbsUp size={24} className="text-quickride-purple" />,
     title: "Rate Your Experience",
+    type: "mobile",
     description: "After your ride, rate your driver and provide feedback to help others."
 }
 ];
@@ -64,9 +69,31 @@ return (
                 </div>
                 
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-16' : 'md:pr-16'}`}>
-                <div className="bg-gray-100 h-40 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500 text-center px-4">Step {index + 1} illustration</p>
-                </div>
+                    {step.type === "web" ? (
+                        <div className="relative w-[300px] xl:w-full h-[190px] xl:h-[300px] bg-black rounded-3xl p-4 shadow-xl animate-float">
+                            <div className="absolute inset-2 bg-white rounded-2xl overflow-hidden">
+                                <div className="h-full w-full bg-gray-200 rounded-2xl flex items-center justify-center">
+                                <img
+                                    src={`/images/how-it-works/${index + 1}.png`}
+                                    alt={step.title}
+                                    className="w-full h-full object-cover"
+                                />
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="relative w-64 h-[500px] md:w-80 md:h-[700px] bg-black rounded-3xl p-4 shadow-xl animate-float">
+                            <div className="absolute inset-2 bg-white rounded-2xl overflow-hidden">
+                                <div className="h-full w-full bg-gray-200 rounded-2xl flex items-center justify-center">
+                                <img
+                                    src={`/images/how-it-works/${index + 1}.png`}
+                                    alt={step.title}
+                                    className="w-full h-full object-cover"
+                                />
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             ))}
