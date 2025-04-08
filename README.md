@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: 
+**URL**: https://quickride-website.vercel.app
 
 ## How can I edit this code?
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use QuickRide**
 
-Simply visit the [QuickRide]() and start prompting.
+Simply visit the [QuickRide](https://quickride-website.vercel.app) and start surfing.
 
 Changes made via QuickRide will be committed automatically to this repo.
 
